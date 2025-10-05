@@ -1,0 +1,72 @@
+-- Memory Management in Operating System --
+Memory management is a critical aspect of operating systems that ensures efficient use of the computer's memory resources. It controls how memory is allocated and deallocated to processes, which is key to both performance and stability.
+-- Why Memory Management is reqiured? --
+Allocate and de-allocate memory before and after process execution.
+To keep track of used memory space by processes.
+To minimize fragmentation issues.
+To proper utilization of main memory.
+To maintain data integrity while executing of process.
+--Types of Memory --
+Memory in a computer can be divided into several types, each with its own characteristics:
+1. Primary Memory (Main Memory)
+-Directly accessible by the CPU.
+-Fast and volatile (data is lost when the power is turned off).
+-Used to store data and instructions currently in use.
+1.1 RAM (Random Access Memory)
+-Volatile memory – data is lost when the system is powered off.
+-Temporary storage for active programs and data being processed.
+Two main types:
+1.1.1 SRAM (Static RAM)
+-Stores data using flip-flops.
+-Faster, more expensive.
+-Used for cache memory.
+-Doesn’t need to be refreshed.
+1.1.2 DRAM (Dynamic RAM)
+-Stores data using capacitors.
+-Slower, less expensive.
+-Needs constant refreshing.
+-Used for main system memory.
+1.2 ROM (Read-Only Memory)
+-Non-volatile memory – retains data even after power-off.
+-Stores firmware – software that's rarely changed (like BIOS).
+-Data is written once (or rarely updated).
+1.2.1 PROM (Programmable ROM): Can be programmed once after manufacture.
+1.2.2 EPROM (Erasable PROM): Can be erased using UV light and reprogrammed.
+1.2.3 EEPROM (Electrically EPROM): Can be erased electrically and rewritten many times.
+1.3 Cache Memory
+-Very fast memory located close to the CPU.
+-Stores frequently used data/instructions to speed up processing.
+-Multiple levels:
+1.3.1 L1 cache: Small, very fast, inside CPU.
+1.3.2 L2 cache: Larger, slightly slower, close to CPU.
+1.3.3 L3 cache: Even larger, shared between CPU cores.
+1.4. Registers
+-Smallest, fastest memory storage inside the CPU.
+-Stores data currently being processed (like operands, addresses).
+-Examples: accumulator, instruction register, program counter.
+2. Secondary Memory (Storage Devices)
+-Non-volatile memory – permanent storage.
+-Slower than primary memory.
+-Used to store data, programs, OS, etc.
+2.1. Hard Disk Drive (HDD)
+-Magnetic storage device.
+-Large capacity (in TBs), but slower.
+-Uses spinning disks and read/write heads.
+2.2. Solid State Drive (SSD)
+-Uses flash memory (no moving parts).
+-Much faster than HDDs.
+-More expensive per GB.
+2.3. Optical Drives (CD/DVD/Blu-ray)
+-Use laser technology to read/write data.
+-Mainly used for media storage, backups.
+2.4. USB Flash Drives & Memory Cards
+Portable, small flash storage.
+Used for transferring files and temporary storage.
+2.5. Magnetic Tapes
+-Sequential access storage.
+-Used for long-term backup and archival.
+3.Virtual Memory
+-An OS-level abstraction that uses disk space to simulate extra RAM.
+-Helps run large programs or multiple programs even if RAM is limited.
+-Uses paging: divides memory into fixed-size pages, swapping them in/out of disk as needed.
+-Slower than RAM, but allows for multitasking.
