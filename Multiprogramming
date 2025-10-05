@@ -1,0 +1,25 @@
+-- Multiprogramming --
+Multiprogramming refers to the technique in which multiple programs (or processes) are loaded into memory and executed by the CPU in such a way that the CPU is always kept busy by executing one program while others are waiting for resources (e.g., I/O operations). The goal is to maximize CPU utilization and improve system efficiency.
+-- How Multiprogramming Works --
+-Multiple Programs in Memory: The operating system loads multiple programs into memory. Each program or process is allocated a certain amount of time or CPU cycles.
+-CPU Allocation: The CPU is allocated to one program at a time. However, when a program is waiting for an I/O operation (e.g., reading data from a disk or waiting for user input), the CPU switches to another program that is ready to execute. This allows the CPU to perform useful work instead of being idle.
+-Context Switching: The OS handles the switching between processes using context switching. The state of the currently running process (CPU registers, program counter, etc.) is saved, and the state of the next process to run is restored from memory.
+-Time Sharing: In early multiprogramming systems, time-sharing was used. Each program was given a fixed time slice (quantum) to execute, after which the operating system would switch to the next program. This is a key concept in modern multitasking systems.
+-- example --
+K = I/O operation(time taken)
+then CPU utilization = 1-K
+-- Key concepts --
+-CPU Utilization: By having multiple programs in memory, the CPU can work on one process while another is waiting for I/O, ensuring that the CPU is not idle.
+-Program Execution Overlap: The core idea is that one program is executing while others are waiting. This overlap hides the latency of I/O-bound programs.
+-Memory Management: Multiprogramming requires efficient memory management because multiple programs must reside in memory at the same time. Modern OSs use techniques like virtual memory and paging to ensure that each process can get its own memory space.
+-Job Scheduling: The operating system's job scheduler decides the order in which processes are executed. In multiprogramming, the OS tries to balance the workload between processes so that CPU usage is maximized.
+-- Advantages --
+-Increased CPU Utilization
+-Faster Process Completion
+-Improved System Efficiency
+-Reduced Wastage of Resources
+-- Challenges --
+-Context Switching Overhead
+-Memory Management
+-Concurrency Issues
+-No Parallel Execution
